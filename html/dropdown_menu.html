@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navigation Menu</title>
+  <style>
+    /* Gradient background for nav bar */
+    nav {
+      background: linear-gradient(to bottom, purple, blue);
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Top-level menu */
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    /* nav ul li {
+      position: relative;
+    } */
+
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Dropdown menu */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 180px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    nav ul li ul li a {
+      color: black;
+      padding: 10px 15px;
+      font-weight: normal;
+    }
+
+    nav ul li ul li a:hover {
+      background: #f0f0f0;
+    }
+
+    /* Show dropdown on hover */
+    nav ul li:hover ul {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="#">Services</a>
+        <ul>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Development</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Content Strategy</a></li>
+          <li><a href="#">Training</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
