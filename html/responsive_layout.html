@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header, footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column; /* Mobile default */
+    }
+
+    .main {
+      background: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .left, .right {
+      background: #ddd;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Tablet layout */
+    @media (min-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+      .middle {
+        display: flex;
+        flex-direction: row;
+      }
+      .left, .right {
+        flex: 1;
+      }
+    }
+
+    /* Desktop layout */
+    @media (min-width: 992px) {
+      .container {
+        flex-direction: column;
+      }
+      .middle {
+        display: flex;
+        flex-direction: row;
+      }
+      .left, .main, .right {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Header</header>
+
+  <div class="container">
+    <div class="main">Main</div>
+    <div class="middle">
+      <div class="left">Left</div>
+      <div class="right">Right</div>
+    </div>
+  </div>
+
+  <footer>Footer</footer>
+</body>
+</html>
