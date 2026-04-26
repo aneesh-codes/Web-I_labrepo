@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Example</title>
+</head>
+
+<body>
+    <!-- Four paragraphs -->
+    <p id="p1">This is the first paragraph.</p>
+    <p id="p2">This is the second paragraph.</p>
+    <p id="p3">This is the third paragraph.</p>
+    <p id="p4">This is the fourth paragraph.</p>
+
+    <script>
+        // a. Get the first paragraph using querySelector(tagname)
+        const firstPara = document.querySelector("p");
+        console.log("First paragraph:", firstPara.textContent);
+
+        // b. Get each paragraph using querySelector('#id')
+        const para1 = document.querySelector("#p1");
+        const para2 = document.querySelector("#p2");
+        const para3 = document.querySelector("#p3");
+        const para4 = document.querySelector("#p4");
+
+        console.log("By ID:", para1.textContent, para2.textContent, para3.textContent, para4.textContent);
+
+        // c. Get all p as NodeList using querySelectorAll(tagname)
+        const allParas = document.querySelectorAll("p");
+        console.log("All paragraphs NodeList:", allParas);
+
+        // d. Loop through NodeList and get text content
+        allParas.forEach((p, index) => {
+            console.log(`Paragraph ${index + 1}:`, p.textContent);
+        });
+
+        // e. Set text content to the fourth paragraph
+        para4.textContent = "Fourth Paragraph";
+
+        // f. Set id and class attribute for all paragraphs
+        allParas.forEach((p, index) => {
+            p.setAttribute("id", `para${index + 1}`);
+            p.className = `class${index + 1}`;
+        });
+
+        // g. Change style of each paragraph
+        allParas.forEach((p) => {
+            p.style.color = "blue";
+            p.style.background = "lightyellow";
+            p.style.border = "1px solid black";
+            p.style.fontSize = "18px";
+            p.style.fontFamily = "Arial, sans-serif";
+        });
+
+        // h. Select all paragraphs and loop through each element
+        // Give 1st & 3rd green, 2nd & 4th red
+        allParas.forEach((p, index) => {
+            if (index === 0 || index === 2) {
+                p.style.color = "green";
+            } else {
+                p.style.color = "red";
+            }
+        });
+
+        // i. Set text content, id and class to each paragraph
+        allParas.forEach((p, index) => {
+            p.textContent = `Paragraph ${index + 1}`;
+            p.id = `newId${index + 1}`;
+            p.className = `newClass${index + 1}`;
+        });
+    </script>
+</body>
+
+</html>
