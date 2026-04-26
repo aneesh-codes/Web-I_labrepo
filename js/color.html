@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Numbers 0–100</title>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    const container = document.getElementById("container");
+
+    // Function to check prime
+    function isPrime(num) {
+      if (num < 2) return false;
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+
+    for (let i = 0; i <= 100; i++) {
+      const number = document.createElement("p");
+      number.textContent = i;
+
+      if (isPrime(i)) {
+        number.style.background = "red";       // Prime → red
+      } else if (i % 2 === 0) {
+        number.style.background = "green";     // Even → green
+      } else {
+        number.style.background = "yellow";    // Odd → yellow
+      }
+
+      container.appendChild(number);
+    }
+  </script>
+</body>
+</html>
