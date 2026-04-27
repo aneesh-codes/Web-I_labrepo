@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Table</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #addRowBtn {
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .delete-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="row-no">1</td>
+                <td>
+                    <select>
+                        <option>Select Product</option>
+                        <option>Keyboard</option>
+                        <option>Mouse</option>
+                        <option>Monitor</option>
+                    </select>
+                </td>
+                <td><input type="text" placeholder="Enter Price"></td>
+                <td><button class="delete-btn">🗑️</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="addRowBtn">Add New</button>
+
+    <script src="product.js"></script>
+</body>
+
+</html>
