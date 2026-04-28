@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Screen Properties</title>
+</head>
+<body>
+  <h2>Screen Information</h2>
+  <p id="width"></p>
+  <p id="height"></p>
+  <p id="availWidth"></p>
+
+  <script>
+    document.getElementById("width").innerHTML = "Screen width: " + screen.width;
+    document.getElementById("height").innerHTML = "Screen height: " + screen.height;
+    document.getElementById("availWidth").innerHTML = "Available screen width: " + screen.availWidth;
+  </script>
+</body>
+</html>
