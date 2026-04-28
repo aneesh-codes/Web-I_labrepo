@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Input Numbers</title>
+</head>
+<body>
+  <input type="number" id="userInput" placeholder="Enter a number">
+  <button onclick="generateNumbers()">Generate</button>
+  <div id="output"></div>
+
+  <script>
+    function isPrime(num) {
+      if (num < 2) return false;
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+
+    function generateNumbers() {
+      const limit = document.getElementById("userInput").value;
+      const output = document.getElementById("output");
+      output.innerHTML = ""; // Clear previous
+
+      for (let i = 1; i <= limit; i++) {
+        const num = document.createElement("p");
+        num.textContent = i;
+
+        if (isPrime(i)) {
+          num.style.color = "red";       // Prime → red
+        } else if (i % 2 === 0) {
+          num.style.color = "green";     // Even → green
+        } else {
+          num.style.color = "blue";      // Odd → blue
+        }
+
+        output.appendChild(num);
+      }
+    }
+  </script>
+</body>
+</html>

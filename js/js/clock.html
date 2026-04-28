@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter App</title>
+  <style>
+    #counter {
+      font-size: 30px;
+      margin: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Counter App</h2>
+  <div id="counter">0</div>
+  <button onclick="increase()">+</button>
+  <button onclick="decrease()">-</button>
+  <button onclick="reset()">Reset</button>
+
+  <script>
+    let count = 0;
+    const counter = document.getElementById("counter");
+
+    function increase() {
+      count++;
+      counter.textContent = count;
+    }
+
+    function decrease() {
+      count--;
+      counter.textContent = count;
+    }
+
+    function reset() {
+      count = 0;
+      counter.textContent = count;
+    }
+  </script>
+</body>
+</html>
