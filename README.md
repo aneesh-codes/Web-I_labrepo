@@ -1,2 +1,2 @@
 # Web-I_labrepo
-Projects related to html,css and js.
+Hands-on-project on webdevelopment using HTML,CSS & JS... Hope you enjoy watching my repo. 
